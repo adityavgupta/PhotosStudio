@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="Adw" version="1.0"/>
+  <template class="PhotosstudioWindow" parent="AdwApplicationWindow">
+    <property name="title" translatable="yes">PhotosStudio</property>
+    <property name="default-width">800</property>
+    <property name="default-height">600</property>
+
+    <property name="content">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
+            <child type="end">
+              <object class="GtkMenuButton">
+                <property name="primary">True</property>
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Main Menu</property>
+                <property name="menu-model">primary_menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <property name="content">
+          <!-- wrap everything in a pane to create the side by side layout -->
+          <object class="GtkPaned">
+            <property name="position">250</property>
+
+            <!-- left pane -->
+            <child>
+              <object class="GtkBox" id="sidebar_view">
+                <!-- true means vertical, false means horizontal -->
+                <property name="orientation">vertical</property>
+                <property name="spacing">0</property>
+                <property name="margin-top">6</property>
+                <property name="margin-bottom">6</property>
+                <property name="margin-start">6</property>
+                <property name="margin-end">6</property>
+                <property name="width-request">250</property>
+                <property name="halign">fill</property>
+                <property name="hexpand">true</property>
+                <!-- other content like list boxes, button groups, scroll go here -->
+              </object>
+            </child>
+
+            <!-- right pane -->
+            <child>
+              <object class="GtkScrolledWindow" id="scroll_window">
+                <property name="hexpand">true</property>
+                <property name="vexpand">true</property>
+                <!-- flushed edges -->
+                <property name="margin-top">0</property>
+                <property name="margin-bottom">0</property>
+                <property name="margin-start">0</property>
+                <property name="margin-end">0</property>
+                <property name="hscrollbar-policy">never</property>
+
+                <child>
+                  <object class="GtkBox" id="main_timeline_view">
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkLabel" id="empty_label">
+                        <property name="label" translatable="yes">Nothing to show here</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+
+          </object>
+        </property>
+      </object>
+    </property>
+  </template>
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">app.shortcuts</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About PhotosStudio</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>
+

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=PhotosStudio
+Exec=photosstudio
+Icon=com.github.adityavgupta.PhotosStudio
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true
