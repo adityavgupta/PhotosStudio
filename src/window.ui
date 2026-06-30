@@ -25,7 +25,7 @@
         <property name="content">
           <!-- wrap everything in a pane to create the side by side layout -->
           <object class="GtkPaned">
-            <property name="position">250</property>
+            <property name="position">185</property>
 
             <!-- left pane -->
             <child>
