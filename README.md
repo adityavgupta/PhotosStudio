@@ -12,5 +12,10 @@ Much like shotwell, the goal is to point the main view grid to make a timeline b
 
 2) It is also to practice my Image Processing and Digital Signal Processing skills in cpp.
 
+3) Learn to build for gnome.
+
 ### Note to other contributors should you want to join
-Make a branch, and pull request.
+Make a branch, and pull request. Please be aligned with at least one of the motivations above.
+
+### State of the project
+Nascent.
