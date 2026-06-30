@@ -17,5 +17,7 @@ Much like shotwell, the goal is to point the main view grid to make a timeline b
 ### Note to other contributors should you want to join
 Make a branch, and pull request. Please be aligned with at least one of the motivations above.
 
+To get started: https://developer.gnome.org/documentation/tutorials/beginners/getting_started.html
+
 ### State of the project
 Nascent.
